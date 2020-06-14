@@ -10,7 +10,7 @@ TotalEmi <- sqldf("Select year,sum(emissions) from NEI
                     where fips = 24510
                   group by year")
 ##Creating the plot
-plot(TotalEmi$year,TotalEmi$`sum(emissions)`,xlab = "Year", ylab="Total emisions (in tons)", main = "PM2.5 Emissions in Baltimore City" )
+plot(TotalEmi$year,TotalEmi$`sum(emissions)`,xlab = "Year", ylab="Total emisions (in tons)", main = "PM2.5 Emissions in Baltimore City" ,type ="l")
 
 
 
