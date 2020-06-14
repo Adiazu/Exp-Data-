@@ -8,7 +8,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 TotalEmi <- sqldf("Select year,sum(emissions) from NEI
                   group by year")
 ##Creating the plot
-plot(TotalEmi$year,TotalEmi$`sum(emissions)`,xlab = "Year", ylab="Total emisions (in tons)",main = "PM2.5 Emissions in United States")
+plot(TotalEmi$year,TotalEmi$`sum(emissions)`,xlab = "Year", ylab="Total emisions (in tons)",main = "PM2.5 Emissions in United States",type="l")
 
 ##Saving the plot
 dev.copy(png,"plot1.png", width=480, height=480)
